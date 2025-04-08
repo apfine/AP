@@ -1,0 +1,253 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;    
+  font-family: 'Roboto', sans-serif; 
+  scroll-behavior: smooth;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+}
+
+#titleBar{
+  width:100%;
+  height:10vh;
+  display:flex;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  position: fixed;
+  z-index: 4;
+}
+.title{
+  display:flex;
+  justify-content:space-around;
+  margin-left:3vw;
+  margin-top:1.4vw;
+  margin-bottom: 2.2vh;
+  border-color: black;
+  border-width:2px;
+  border-radius: 15px;
+  border-top-right-radius: 7px;
+  padding:0.2vw;
+  padding-top:0.8vh;
+  border-style: solid;
+  background-color:gold;
+ 
+}
+.titleButton{
+  text-decoration: none;
+  color:inherit;
+}
+#about{
+  width:100vw;
+  height:100vh;
+  padding-top: 15vh;
+  padding-left:25vw;
+  background-size: cover;
+  background-position: fixed;
+  background-image: url('./assets/bg.svg');
+  z-index:1;
+  justify-content: center;
+  align-items: center;
+}
+#me {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  
+}
+
+#profile-photo {
+  width: 25vh; 
+  height: 20vw;
+  background-image: url('./assets/me.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding-left: 20vw;
+  
+}
+
+#profile-photo:hover{
+  scale:1.05;
+  box-shadow: 0px 0px 30px 2px white;
+  transition: all 0.5s ease;
+}
+#name{
+  p{
+    text-shadow: 0px 5px 19px black;
+    color:rgb(248, 251, 251);
+    padding-left: 7vw;
+    font-family: Impact, sans-serif;
+    font-size:5vw;
+  }
+  p:hover{
+    scale:1.02;
+    transition:
+      scale 0.8s ease-in-out;
+  }
+}
+
+#about-me p{
+  width: 40vw;
+  margin-top:5vh;
+  color:white;
+  padding-left:8vw;
+}
+@media(max-width:560px){
+  .title{
+  width: 40%;
+  justify-content: space-around;
+  padding-bottom: 0.6vh;
+  }
+  #titleBar {
+    overflow-y:hidden;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    flex-direction: row;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 0.5rem;
+    gap: 1rem; 
+    scrollbar-width: none; 
+  }
+  
+  #titleBar::-webkit-scrollbar {
+    display: none;
+  }
+
+  #profile-photo{
+    height:25vh;
+    margin-left:8vh;
+  }
+  #about{
+    padding-left: 5vw;
+    margin-left: 0;
+  }
+  #me{
+    margin-left: 8vw;
+  }
+  #name{
+    margin-top:0px;
+    margin-left:10vw;
+  }
+  #about-me p{
+    padding-top: 0;
+    padding-left: 0;
+    width: 80vw;
+    color:white;
+  }
+}
+.title:hover{
+  background-color: antiquewhite;
+  border-color:brown;
+  box-shadow: 0px 0px 50px 6px goldenrod;
+  scale: 1.2 ;
+  transition:
+    scale 0.5s ease;
+}
+
+
+#CursorGlow {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgb(195, 0, 255) 0%, rgba(0,255,255,0) 80%);
+  pointer-events: none; 
+  transform: translate(-50%, -50%); 
+  border-radius: 50%;
+  z-index: 200; 
+  filter: blur(30px); 
+}
+
+#cursor {
+  display: inline-block;
+  margin-left: 5px;
+  width: 10px;
+  background-color: white;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#stack-pre{
+  margin-top:0px;
+  height:100vh;
+  width:100vw;
+  background-image: url('./assets/bg.svg');
+  background-size: cover;
+  background-position: fixed;
+  align-content:center;
+}
+
+.terminal {
+  background-color: #0d0d0d;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
+  width: 80%;
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px #fffb00;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background-color: #2d2d2d;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-header .red,
+.terminal-header .yellow,
+.terminal-header .green {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-header .red {
+  background-color: #ff605c;
+}
+.terminal-header .yellow {
+  background-color: #ffbd44;
+}
+.terminal-header .green {
+  background-color: #00ca56;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+.command {
+  color: #00ff00;
+  margin: 10px 0;
+}
+
+.output {
+  color: #ffffff;
+  margin: 5px 0 15px 20px;
+}
