@@ -1,0 +1,74 @@
+
+.survey-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background: #0f172a;
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+.survey-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.survey-form {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.field-label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.field-input,
+.field-textarea {
+  background: #334155;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 10px;
+  color: #f1f5f9;
+  font-size: 1rem;
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.field-textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #38bdf8;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0ea5e9;
+}
