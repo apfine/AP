@@ -5,8 +5,8 @@ import Home from './components/Home.jsx';
 function App() {
   return (
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Navigate to="/" />} />
         <Route path="/survey" element={<Survey />} />
       </Routes>
   );
